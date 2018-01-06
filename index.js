@@ -9,16 +9,13 @@ let arrow = () => 'es6 is awesome!'
 //   var name = name || 'sam'
 //   return name
 // }
-let defaultParameter = name =>{
-  var name = name || 'sam';
-  return name;
-}
+let defaultParameter = name => name || 'sam'; 
 
 // Use the spread operator to combine arr1 and arr2
 // function combineArrays(arr1, arr2) {
 //   return arr1.concat(arr2)
 // }
-var combineArrays = (arr1, arr2) => arr1.concat(arr2)
+var combineArrays = (arr1, arr2) => [...arr1, ...arr2];
 
 //use destructuring to return the object's cyf property
 // function destructuring(obj) {
@@ -30,7 +27,8 @@ const destructuring = obj => obj.cyf;
 // function templateString(a, b) {
 //   return 'The sum is equal to ' + (a + b).toString()
 // }
-var templateString = (a, b) => 'The sum is equal to ' + (a + b).toString()
+var templateString = (a, b) => `The sum is equal to ${a + b}`; 
+
 
 module.exports = {
   arrow,
